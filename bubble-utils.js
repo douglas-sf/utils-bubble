@@ -20,10 +20,10 @@ function Utils({ context }) {
       if (typeof oldValue !== 'object') {
         result[key] = oldValue;
       } else if (oldValue instanceof Array) {
-        result[key] = oldValue.map((vlw) => transformNestedObject(vlw, initialPrefix));
+        result[key] = oldValue.map((vlw) => formatToBubbleDatatypeObject(vlw, initialPrefix));
       } else {
         const prefix = key + '.';
-        const newData = transformNestedObject(oldValue, prefix);
+        const newData = formatToBubbleDatatypeObject(oldValue, prefix);
         result = { ...result, ...newData };
       }
     });
