@@ -1,4 +1,4 @@
-function Utils(context) {
+function Utils({ context }) {
   function useAsync(fn, ...args) {
     return context.async((cb) => {
       fn(...args)
