@@ -7,7 +7,7 @@ function Utils({ context }) {
     });
   }
 
-  function formatToBubbleDatatypeObject(data, initialPrefix = '') {
+  function formatToBubbleDatatypeObject(data, initialPrefix = '_p_') {
     if (typeof data !== 'object') return data;
 
     let result = {};
